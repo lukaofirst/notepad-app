@@ -1,0 +1,16 @@
+$default-green : #3cb372;
+$default-gray : #8b8b8b;
+$default-red: #de165f;
+$font-stack: 'Montserrat', sans-serif;
+
+@mixin setDisplay($value, $value2){
+    display: $value;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: $value2;
+}
+
+@mixin set-background($color) {
+    background-color: $color;
+}
+

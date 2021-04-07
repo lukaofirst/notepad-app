@@ -1,0 +1,175 @@
+@import 'config';
+@import 'utilities';
+@import 'buttons';
+ 
+.bg {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .dark-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: inherit;
+        background-color: rgba(0, 0, 0, 0.3);
+
+        .box-task {
+            text-align: center;
+            padding: 20px 0;
+
+            h2 {
+                font-weight: normal;
+                font-size: 2.5rem;
+                color: white;
+            }
+
+            #time {
+                margin: 5px 0;
+                font-size: 1.8rem;
+                font-weight: 200;   
+                color: white;
+                @include setDisplay(flex, center);
+                flex-direction: row;
+                
+                div {
+                    padding: 10px;
+
+                    i {
+                        margin: 0 5px;
+                    }
+                }
+            }
+
+            .add-task {
+                @include setDisplay(flex, center);
+                padding-bottom: 5px;
+
+                .task-title {
+                    width: 230px;
+                    padding: 7px 10px;
+                    margin: 10px;
+                    font-size: 1.1rem;
+                    border-radius: 12px;
+                    border: 0;
+                    outline: 0;
+                }
+
+                .task-body {
+                    width: 250px;
+                    height: 35px;
+                    padding: 7px 10px;
+                    margin: 10px;
+                    font-size: 1.1rem;
+                    resize: none;
+                    border: 0;
+                    outline: 0;
+                    border-radius: 12px;
+                }
+
+                .add-task-btn {
+                    margin: 10px;
+                    padding: 7px 14px;
+                    font-size: 1.1rem;
+                    transition: 0.4s;
+                    @include set-background($default-green);
+                    @extend %button;
+                }
+
+                .clear-task-btn {
+                    margin: 10px;
+                    padding: 7px 14px;
+                    font-size: 1.1rem;
+                    transition: 0.4s;
+                    @include set-background($default-red);
+                    @extend %button;
+                }
+
+                .add-task-btn:hover, .clear-task-btn:hover {
+                    opacity: 0.8;
+                    transform: scale(0.98);
+                }
+            }
+
+            #error-message {
+                color: $default-red;
+                font-size: 1rem;
+                padding: 10px 0;
+            }
+
+            .box-task-wrapper {
+                width: 100%;
+                height: 70vh;
+                padding: 0 2%;
+                @include setDisplay(flex, top);
+                overflow-y: auto;
+
+                .box-task-single {
+                    width: 350px;
+                    height: 250px;
+                    background-color: rgba(0,0,0,0.5);
+                    color: white;
+                    margin: 1%;
+                    padding: 10px 1%;
+                    border-radius: 12px;
+                    position: relative;
+                    transition: 0.7s;
+
+                    .del-task {
+                        font-size: 2rem;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        color: white;
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        line-height: 30px;
+                        background-color: $default-gray;
+                        border-radius: 0 12px;
+                        cursor: pointer;
+                        transition: 0.4s;
+                    }
+
+                    .del-task:hover {
+                        background-color: $default-red;
+                    }
+
+                    h3 {
+                        height: 23px;
+                    }
+
+                    p {
+                        text-align: justify;
+                        padding: 0 2% 10px 2%;
+                        height: 175px;
+                        word-wrap: break-word;
+                        white-space: pre-line;
+                        overflow-y: auto;
+                    }
+
+                    .success-task {
+                        padding: 7px 10px;
+                        font-size: 1rem;
+                        background-color: transparent;
+                        border: 1px solid $default-gray;
+                        transition: 0.4s;
+                        @extend %button;
+                    }
+
+                    .success-task:hover {
+                        background-color: $default-green;
+                        border: 1px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import 'mobile';

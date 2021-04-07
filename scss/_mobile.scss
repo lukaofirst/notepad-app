@@ -1,0 +1,11 @@
+@media (min-width: 426px) and (max-width: 934px) {
+    .bg {
+        height: 120vmax;
+    }
+}
+
+@media (max-width: 425px) {
+    .bg {
+        height: 150vmax;
+    }
+}
