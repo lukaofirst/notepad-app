@@ -9,6 +9,8 @@
 * Sass (CSS preprocessor);
 * JavaScript (VanillaJS).
 
+##### Check out the application online on the link: https://lukaofirst.github.io/notepad-app/
+
 ### [PT-BR]
 
 #### Projeto pessoal de um bloco de anotações onde você pode adicionar ou remover uma tarefa, para esse projeto foi usado:
@@ -17,3 +19,5 @@
 * CSS3;
 * Sass (Pré-processador CSS);
 * JavaScript (JavaScript Puro).
+
+##### Veja a aplicação online no link: https://lukaofirst.github.io/notepad-app/
