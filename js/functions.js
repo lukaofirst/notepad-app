@@ -115,7 +115,7 @@ function addTask(e) {
         <button class="success-task">Tarefa Concluída</button>
         `
 
-    if(taskTitle.value == '' || taskBody.value == '') {
+    if(taskTitle.value === '' || taskBody.value === '') {
         spanErrorMessage.innerText = "Erro: Motivo - Preencha todos os campos";
 
         setTimeout(() => {
@@ -144,22 +144,24 @@ function addTask(e) {
 
 // Store Task
 function storeTask(taskT, taskB) {
-    let tasksTitle;
-    let tasksBody;
+    if(taskT !== '' || taskB !== '') {
+        let tasksTitle;
+        let tasksBody;
 
-    if(localStorage.getItem('tasksTitle') === null) {
-        tasksTitle = [];
-        tasksBody = [];
-    } else {
-        tasksTitle = JSON.parse(localStorage.getItem('tasksTitle'));
-        tasksBody = JSON.parse(localStorage.getItem('tasksBody'));
+        if(localStorage.getItem('tasksTitle') === null) {
+            tasksTitle = [];
+            tasksBody = [];
+        } else {
+            tasksTitle = JSON.parse(localStorage.getItem('tasksTitle'));
+            tasksBody = JSON.parse(localStorage.getItem('tasksBody'));
+        }
+
+        tasksTitle.push(taskT);
+        tasksBody.push(taskB);
+
+        localStorage.setItem('tasksTitle', JSON.stringify(tasksTitle));
+        localStorage.setItem('tasksBody', JSON.stringify(tasksBody));
     }
-
-    tasksTitle.push(taskT);
-    tasksBody.push(taskB);
-
-    localStorage.setItem('tasksTitle', JSON.stringify(tasksTitle));
-    localStorage.setItem('tasksBody', JSON.stringify(tasksBody));
 }
 
 
