@@ -227,8 +227,7 @@ function clearStoreTask() {
 // Finish A Task
 function doneTask(e) {
     if(e.target.classList.contains('success-task')) {
-        e.target.style.backgroundColor = 'rgb(60, 179, 113)';
-        e.target.style.border = '1px solid transparent';
+        e.target.classList.toggle('success');
     }
 }
 

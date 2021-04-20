@@ -195,7 +195,7 @@ body {
   transition: 0.4s;
 }
 
-.bg .dark-overlay .box-task .box-task-wrapper .box-task-single .success-task:hover {
+.bg .dark-overlay .box-task .box-task-wrapper .box-task-single .success {
   background-color: #3cb372;
   border: 1px solid transparent;
 }
