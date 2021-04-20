@@ -123,7 +123,7 @@ function addTask(e) {
         }, 3000);
 
     } else if (taskTitle.value.length >= 21) {
-        spanErrorMessage.innerText = "Insira até 20 caracteres no 'Nome da Tarefa'";
+        spanErrorMessage.innerText = "Erro: Insira até 20 caracteres no 'Nome da Tarefa'";
 
         setTimeout(() => {
             spanErrorMessage.innerText = '';
@@ -131,7 +131,6 @@ function addTask(e) {
 
     } else {
         boxTaskWrapper.appendChild(boxTaskSingle);
-
     }
 
     storeTask(taskTitle.value, taskBody.value);
@@ -145,22 +144,24 @@ function addTask(e) {
 // Store Task
 function storeTask(taskT, taskB) {
     if(taskT !== '' || taskB !== '') {
-        let tasksTitle;
-        let tasksBody;
+        if(taskT.length <= 20) {
+            let tasksTitle;
+            let tasksBody;
 
-        if(localStorage.getItem('tasksTitle') === null) {
-            tasksTitle = [];
-            tasksBody = [];
-        } else {
-            tasksTitle = JSON.parse(localStorage.getItem('tasksTitle'));
-            tasksBody = JSON.parse(localStorage.getItem('tasksBody'));
+            if(localStorage.getItem('tasksTitle') === null) {
+                tasksTitle = [];
+                tasksBody = [];
+            } else {
+                tasksTitle = JSON.parse(localStorage.getItem('tasksTitle'));
+                tasksBody = JSON.parse(localStorage.getItem('tasksBody'));
+            }
+
+            tasksTitle.push(taskT);
+            tasksBody.push(taskB);
+
+            localStorage.setItem('tasksTitle', JSON.stringify(tasksTitle));
+            localStorage.setItem('tasksBody', JSON.stringify(tasksBody));
         }
-
-        tasksTitle.push(taskT);
-        tasksBody.push(taskB);
-
-        localStorage.setItem('tasksTitle', JSON.stringify(tasksTitle));
-        localStorage.setItem('tasksBody', JSON.stringify(tasksBody));
     }
 }
 
