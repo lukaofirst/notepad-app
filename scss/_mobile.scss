@@ -6,12 +6,36 @@
 
 @media (max-width: 425px) {
     .bg {
-        height: 150vmax;
+        height: 170vmax;
+
+        .dark-overlay {
+            .container {
+                .box-task {
+                    .box-task-wrapper {
+                        height: 96.5vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .bg {
+        .dark-overlay {
+            .container {
+                .box-task {
+                    .box-task-wrapper {
+                        height: 100vh;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media (max-height: 700px) {
     .bg {
-        height: 200vmax;
+        height: 70vmax;
     }
 }
