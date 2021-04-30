@@ -1,11 +1,17 @@
 @media (min-width: 426px) and (max-width: 934px) {
     .bg {
-        height: 120vmax;
+        height: 150vmax;
     }
 }
 
 @media (max-width: 425px) {
     .bg {
         height: 150vmax;
+    }
+}
+
+@media (max-height: 700px) {
+    .bg {
+        height: 200vmax;
     }
 }
