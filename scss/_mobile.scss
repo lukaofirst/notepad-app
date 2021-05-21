@@ -1,6 +1,34 @@
+@media (max-width: 375px) {
+    .bg {
+        .dark-overlay {
+            .container {
+                .box-task {
+                    .box-task-wrapper {
+                        width: 70%;
+
+                        .box-task-single {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 426px) and (max-width: 934px) {
     .bg {
         height: 150vmax;
+        .dark-overlay {
+            .container {
+                .box-task {
+                    .box-task-wrapper {
+                        width: 85%;
+                        height: 100vh;
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -104,6 +104,7 @@
 
             .box-task-wrapper {
                 width: 100%;
+                margin: 0 auto;
                 height: 70vh;
                 padding: 0 2%;
                 @include setDisplay(flex, top);
@@ -111,7 +112,6 @@
 
                 .box-task-single {
                     width: 350px;
-                    height: 250px;
                     background-color: rgba(0,0,0,0.5);
                     color: white;
                     margin: 1%;
@@ -146,7 +146,7 @@
 
                     p {
                         text-align: justify;
-                        padding: 10px 2%;
+                        margin: 10px 2%;
                         height: 175px;
                         word-wrap: break-word;
                         white-space: pre-line;
