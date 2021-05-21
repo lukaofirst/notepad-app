@@ -145,6 +145,7 @@ body {
 
 .bg .dark-overlay .box-task .box-task-wrapper .box-task-single {
   width: 350px;
+  height: 280px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   margin: 1%;
